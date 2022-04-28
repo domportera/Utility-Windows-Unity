@@ -4,38 +4,35 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace UtilityWindows
+public class QuickNoticeWindow : MonoBehaviour
 {
-    public class QuickNoticeWindow : MonoBehaviour
+    [SerializeField] Text confirmationText = null;
+    [SerializeField] Button closeButton = null;
+
+    UnityAction onHide = null;
+
+    // Start is called before the first frame update
+    void Awake()
     {
-        [SerializeField] Text confirmationText = null;
-        [SerializeField] Button closeButton = null;
+        closeButton.onClick.AddListener(HideConfirmationWindow);
+    }
 
-        UnityAction onHide = null;
+    public void Initialize(string _text, float _hideDelay, UnityAction _onHide)
+    {
+        onHide = _onHide;
+        confirmationText.text = _text;
+        StartCoroutine(HideConfirmationWindowAfterDelay(_hideDelay));
+    }
 
-        // Start is called before the first frame update
-        void Awake()
-        {
-            closeButton.onClick.AddListener(HideConfirmationWindow);
-        }
+    IEnumerator HideConfirmationWindowAfterDelay(float _hideDelay)
+    {
+        yield return new WaitForSeconds(_hideDelay);
+        HideConfirmationWindow();
+    }
 
-        public void Initialize(string _text, float _hideDelay, UnityAction _onHide)
-        {
-            onHide = _onHide;
-            confirmationText.text = _text;
-            StartCoroutine(HideConfirmationWindowAfterDelay(_hideDelay));
-        }
-
-        IEnumerator HideConfirmationWindowAfterDelay(float _hideDelay)
-        {
-            yield return new WaitForSeconds(_hideDelay);
-            HideConfirmationWindow();
-        }
-
-        void HideConfirmationWindow()
-        {
-            onHide?.Invoke();
-            Destroy(gameObject);
-        }
+    void HideConfirmationWindow()
+    {
+        onHide?.Invoke();
+        Destroy(gameObject);
     }
 }

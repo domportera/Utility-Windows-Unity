@@ -4,31 +4,28 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace UtilityWindows
+public class ErrorWindow : MonoBehaviour
 {
-    public class ErrorWindow : MonoBehaviour
+
+    [SerializeField] Text errorText = null;
+    [SerializeField] Button closeButton = null;
+
+    private void Awake()
     {
+        closeButton.onClick.AddListener(HideErrorWindow);
+    }
 
-        [SerializeField] Text errorText = null;
-        [SerializeField] Button closeButton = null;
-
-        private void Awake()
+    public void Initialize(string _text, UnityAction _onClose)
+    {
+        errorText.text = _text;
+        if(_onClose != null)
         {
-            closeButton.onClick.AddListener(HideErrorWindow);
+            closeButton.onClick.AddListener(_onClose);
         }
+    }
 
-        public void Initialize(string _text, UnityAction _onClose)
-        {
-            errorText.text = _text;
-            if (_onClose != null)
-            {
-                closeButton.onClick.AddListener(_onClose);
-            }
-        }
-
-        void HideErrorWindow()
-        {
-            Destroy(gameObject);
-        }
+    void HideErrorWindow()
+    {
+        Destroy(gameObject);
     }
 }
