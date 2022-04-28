@@ -1,0 +1,21 @@
+{
+  "name": "com.domportera.utility-windows",
+  "displayName": "Utility Windows",
+  "version": "0.1.0",
+  "unity": "2021.2",
+  "description": "Package for Utility Windows, for basic confirmation and option dialogues",
+  "keywords": [
+    "utility",
+    "windows",
+    "confirmation"
+  ],
+  "category": "UI",
+  "scopedRegistries": [
+    
+  ],
+  "dependencies": {
+  },
+  "unityRelease": "18f1",
+  "type": "ui",
+  "hideInEditor": false
+}
