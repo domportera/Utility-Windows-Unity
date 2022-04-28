@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5146039145414363067}
   - component: {fileID: 6143425327894653105}
   - component: {fileID: 4686247858973319772}
+  - component: {fileID: 6696731244295683913}
   m_Layer: 0
   m_Name: UtilityWindows
   m_TagString: Untagged
@@ -54,16 +55,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windowParent: {fileID: 8978765592376046587}
   confirmationDisplayTime: 3
-  confirmationWindowPrefab: {fileID: 2784571829508924954, guid: 57266b972dbb974478f244c9120b90b3,
-    type: 3}
-  multiOptionWindowPrefab: {fileID: 2784571829508924954, guid: 5273301d7ad66a245a7b4f35d68585d6,
-    type: 3}
-  sliderWindowPrefab: {fileID: 7401717003451253287, guid: eae4e3ffd04d1a54b8baf47d13eabde1,
-    type: 3}
-  errorWindowPrefab: {fileID: 7670664509640035534, guid: d8583d319e696e043b5a5d61b247d0c7,
-    type: 3}
-  quickNoticeWindowPrefab: {fileID: 4117071663050219842, guid: 53d028dddd5e98346a08f2351ffb9111,
-    type: 3}
+  confirmationWindowPrefab: {fileID: 2784571829508924954, guid: 57266b972dbb974478f244c9120b90b3, type: 3}
+  multiOptionWindowPrefab: {fileID: 2784571829508924954, guid: 5273301d7ad66a245a7b4f35d68585d6, type: 3}
+  sliderWindowPrefab: {fileID: 7401717003451253287, guid: eae4e3ffd04d1a54b8baf47d13eabde1, type: 3}
+  errorWindowPrefab: {fileID: 7670664509640035534, guid: d8583d319e696e043b5a5d61b247d0c7, type: 3}
+  quickNoticeWindowPrefab: {fileID: 4117071663050219842, guid: 53d028dddd5e98346a08f2351ffb9111, type: 3}
 --- !u!223 &5146039145414363067
 Canvas:
   m_ObjectHideFlags: 0
@@ -116,3 +112,20 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
+--- !u!114 &6696731244295683913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239531664508702834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
