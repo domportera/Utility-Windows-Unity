@@ -1,7 +1,7 @@
 {
   "name": "com.domportera.utility-windows",
   "displayName": "Utility Windows",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "unity": "2021.2",
   "description": "Package for Utility Windows, for basic confirmation and option dialogues",
   "keywords": [
