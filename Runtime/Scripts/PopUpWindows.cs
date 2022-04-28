@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class UtilityWindows : MonoBehaviour
+public class PopUpWindows : MonoBehaviour
 {
     [SerializeField] RectTransform windowParent = null;
     [SerializeField] float confirmationDisplayTime = 3f;
@@ -17,7 +17,7 @@ public class UtilityWindows : MonoBehaviour
     [SerializeField] GameObject errorWindowPrefab = null;
     [SerializeField] GameObject quickNoticeWindowPrefab = null;
 
-    public static UtilityWindows instance;
+    public static PopUpWindows instance;
 
 	private void Awake()
 	{
